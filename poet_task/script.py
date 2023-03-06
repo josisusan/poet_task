@@ -7,5 +7,5 @@ def main():
 def hello_world():
     print(emojize('Hello World :green_heart:'))
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
