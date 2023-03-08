@@ -1,4 +1,5 @@
 from emoji import emojize
+from fire import Fire
 
 def main():
     print(emojize('Great Work :red_heart:'))
@@ -8,5 +9,17 @@ def hello_world():
     print(emojize('Hello World :green_heart:'))
 
 
+def drive_loader(
+    cred: str = None,
+    snow_cred: str = None
+) -> None:
+    with open(file=cred, mode='r') as f1,  open(file=snow_cred, mode='r') as f2:
+        print("reading cred:")
+        print(f1.read())
+        print("reading snow cred:")
+        print(f2.read())
+    print("Done with printing")
+
+
 if __name__ == "__main__":
-    main()
+    Fire({"drive": drive_loader})
